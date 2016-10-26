@@ -1,0 +1,40 @@
+---
+title: "Railway Management System"
+author: "Deepak Yadav"
+date: "22 October 2016"
+output: pdf_document
+---
+
+## Project Structure
+        . refers to Project_1 Directory i.e. current working directory
+    
+        1. ./railway/views.py : contains important methods which return HttpResponse object
+    
+        2. ./Project_1/urls.py : Map url to methods in views
+    
+        3. ./static : css and images
+    
+        4. ./templates : html pages
+    
+        5. ./Project_1/settings.py: store database details, template path, static path.
+
+## How to start server?
+Go to the Project_1 directory and run ``python manage.py runserver``
+
+## Go to home page
+After starting the server go to the ``https://localhost:port/home`` i.e. homepage of the website.
+
+## Facilities provided to the end user
+
+  In order to do something you must have an account. So you can **signup** if you don't have one and you are good to go.
+  Now you have an account so after successful **login** you can
+  
+  1. know about trains: **User** need to provide **train number** as **input**. If train number is valid then train information will be displayed to the user such as **seats availability**, whether **food** is available or not, on **which day** of the week it runs, **train route**, **arrival time** and **departure time** and much more.
+  
+  2. find trains between stations: Provide two **station codes** and you will get to know all trains passes through both the specified stations. Both station codes must be different.
+  
+  3. book a ticket: Booking a ticket is very simple. You just need to fill a form correctly. You will have to provide **train number**, **first name**, **last name**, select **gender** from drop down menu, **age**, select **class(sleeper, 1 AC, 2 AC, 3 AC)** from drop down menu and **phone number**.
+          
+## Other facilities
+  1. HTML pages are linked for better user experience.
+      

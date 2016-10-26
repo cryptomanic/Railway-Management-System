@@ -1,0 +1,53 @@
+input[type=submit] 
+{
+    background-color: blue; /* Green */
+    border: none;
+    color: white;
+    padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+}
+
+body {
+	background-image: url("../images/train.jpg");		
+	background-repeat: no-repeat;
+    background-position: right top;
+}
+
+button {
+    background-color: green; /* Green */
+    border: none;
+    color: white;
+    padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+}
+
+b {
+    color: red;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 5vw;
+}
+
+th {
+    background-color: blue;
+    color: white;
+}
+
+td {
+    background-color: green;
+    color: white;
+}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+}

@@ -1,0 +1,93 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>home</title>
+  <link rel="stylesheet" href="{% static 'css/traininfo.css' %}" /> 
+</head>
+<body>  
+  <center>    
+    <h1> Train Info </h1>
+    <form method="POST">{% csrf_token %}
+      <b>TRAIN NUMBER</b><br>
+      <input type="number" name="trainno" min="10000" max="99999"><br><br>  
+      <input type="submit"><br>
+    </form> <br>
+      <a href="/logout/"> <button> logout </button> </a><br> 
+  </center>
+  {% if show %}
+  <br>
+ <table border = 1, style="width:100%">
+  <tr>
+    <th>Number</th>
+    <th>Name</th>
+    <th>sleeper seats</th>
+    <th>first ac seats</th>
+    <th>second ac seats</th>
+    <th>third ac seats</th>
+    <th>wifi</th>
+    <th>food</th>
+  </tr>
+  <tr>
+    <td>{{info.0}}</td>
+    <td>{{info.1}}</td>
+    <td>{{info.2}}</td>
+    <td>{{info.3}}</td>
+    <td>{{info.4}}</td>
+    <td>{{info.5}}</td>
+    <td>{{info.6}}</td>
+    <td>{{info.7}}</td>    
+  </tr>  
+</table> <br> 
+ <table border = 1, style="width:100%">
+  <tr>
+    <th>Sunday</th>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+    <th>Saturday</th>
+  </tr>
+  <tr>
+    <td>{{info.8}}</td>
+    <td>{{info.9}}</td>
+    <td>{{info.10}}</td>
+    <td>{{info.11}}</td>
+    <td>{{info.12}}</td>
+    <td>{{info.13}}</td>
+    <td>{{info.14}}</td>
+    <td>{{info.15}}</td>    
+  </tr>  
+</table> <br>
+
+<table border = 1, style="width:100%">  
+  <tr>
+    <th>Station Code</th>
+    <th>arrival time</th>
+    <th>departure time</th>
+  </tr>
+  {% for row in stop %}
+    <tr>
+      <td>{{row.1}}</td>
+      <td>{{row.2}}</td>
+      <td>{{row.3}}</td>
+    </tr>  
+  {% endfor %}
+</table> <br>
+<table border = 1, style="width:100%">
+  <tr>
+    <th>Station Code</th>
+    <th>Station Name</th>
+  </tr>
+  {% for key, value in station.items %}
+    <tr>
+      <td>{{key}}</td>
+      <td>{{value}}</td>
+    </tr>  
+  {% endfor %}
+</table> <br>
+{% endif %}
+</body>
+</html>

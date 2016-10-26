@@ -1,0 +1,22 @@
+body {
+	background-image: url("../images/train.jpg");		
+	background-repeat: no-repeat;
+    background-position: right top;
+}
+
+h1 {
+	text-align: center;
+	color: white;
+	font-size: 5vw;
+}
+
+button {
+    background-color: green; /* Green */
+    border: none;
+    color: white;
+    padding: 1.2vw 3.4vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.4vw;
+}

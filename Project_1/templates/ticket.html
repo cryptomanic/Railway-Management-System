@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>home</title>
+  <link rel="stylesheet" href="{% static 'css/ticket.css' %}" /> 
+</head>
+<body>  
+  <center>
+    
+    {% if not show %}
+    <h1> Book Tickets </h1>
+ <form method="POST">{% csrf_token %}
+  <b>TRAIN NUMBER</b><br>
+  <input type="number" name="tnumber" min="10000" max="99999"><br><br>
+  <b>FIRST NAME</b><br>
+  <input type="text" name="fname"><br><br>
+  <b>LAST NAME</b><br>
+  <input type="text" name="lname"><br><br>
+  <b>GENDER</b><br>
+  <select name="gender">
+    <option>Male</option>
+    <option>Female</option>
+  </select><br> <br> 
+  <b>AGE</b><br>
+  <input type="number" name="age" min="6"><br><br>
+  <b>CLASS</b><br>
+  <select name="tclass">
+    <option>sleeper</option>
+    <option>first class ac</option>
+    <option>second class ac</option>
+    <option>third class ac</option>
+  </select><br> <br> 
+  <b>PHONE NO</b><br>
+  <input type="text" name="number"><br><br>  
+  <input type="submit" >
+</form><br>
+<a href="/logout/"> <button>logout </button></a><br>
+{% endif %}
+{% if show %}
+  <h1>Ticket Booked</h1><br>
+  <a href="/ticket/"><button>book another ticket</button></a><br><br>   
+  <a href="/traininfo/"><button>know about trains</button></a><br><br> 
+  <a href="/findtrains/"><button>find trains b/w stations</button></a><br><br> 
+  <a href="/logout/"> <button>logout </button></a><br><br> 
+{% endif %}
+    </center>
+</body>
+</html>
+
+
+

@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>home</title>
+  <link rel="stylesheet" href="{% static 'css/findtrains.css' %}" /> 
+</head>
+<body>  
+  <center>    
+    <h1> Find Trains </h1>
+     <form method="POST">{% csrf_token %}
+  		<b>STATION CODE 1</b><br>
+  		<input type="text" name="fstation"><br><br>
+  		<b>STATION CODE 2</b><br>
+ 		<input type="text" name="sstation"><br><br>
+ 	    <input type="submit">
+	</form> <br> 
+    <a href="/logout/"> <button> logout </button> </a><br> 
+  </center>    
+  <center>
+  	{% if show %}
+	<h2>Trains Available</h2>
+	{% for trainno in trains %}
+	<i>{{trainno.0}}</i><br>
+	{% endfor %}<br>
+	<a href="/traininfo/"> <button>click here to know the details of these trains </button></a><br>
+	{% endif %}
+  </center>
+</body>
+</html>
+
+
