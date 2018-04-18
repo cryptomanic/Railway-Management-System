@@ -18,6 +18,13 @@ output: pdf_document
     
         5. ./Project_1/settings.py: store database details, template path, static path.
 
+## Create database, create and populate tables
+1) Open ubuntu command prompt
+2) Start mysql as `mysql -u <your_user> -p`
+3) Create database `railway_management` as `create database railway_management;`
+4) Select database as `use railway_management;`
+5) Use `commands.sql` file in the main repository to create and populate tables. Run `source <path>/Railway-Management-System/commands.sql`
+
 ## How to start server?
 Go to the Project_1 directory and run ``python manage.py runserver``
 
